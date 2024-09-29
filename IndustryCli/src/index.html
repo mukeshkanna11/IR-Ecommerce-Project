@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ECommerce Store</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+</head>
+<body class="">
+<div class="flex font-bold justify-stretch ">
+  <img src="./assests/Mugi l.png" class="w-32 h-32"><span class="ml[-500px] mt-12 text-2xl italic text-blue-700 font-poppins">Fashion-Hub</span>
+  
+    
+</div>
+ <!-- Search Bar -->
+ <div class="ml-6 ">
+  <input type="text" id="searchBar" placeholder="Search products..." class="w-1/4 p-3 italic border border-blue-700 rounded-md shadow-sm font-poppins ">
+</div>
+  <!-- Container -->
+  <div class="container p-6 mx-auto ">
+    
+   
+    
+    <!-- Product Grid -->
+    <div id="productGrid" class="grid grid-cols-1 gap-6 italic sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 font-poppins">
+      <!-- Products will be rendered here -->
+    </div>
+
+  </div>
+
+  <!-- Modal for product details -->
+  <div id="productModal" class="fixed inset-0 items-center hidden bg-gray-800 bg-opacity-75 justify-stretch ">
+    <div class="w-full p-6 italic bg-white rounded-lg shadow-lg font-poppins ">
+      <h2 id="modalTitle" class="mb-4 text-xl italic font-bold font-poppins"></h2>
+      <img id="modalImage" class="object-contain w-full h-48 mb-4" />
+      <p id="modalDescription" class="mb-4 text-gray-700 font-poppins"></p>
+      <p id="modalQuantity" class="italic font-semibold text-gray-800 font-poppins"></p>
+
+      <!-- Place Order Section -->
+      <div class="mt-4">
+        <label for="quantity" class="block text-sm italic font-medium text-gray-700 font-poppins">Order Quantity</label>
+        <input type="number" id="orderQuantity" class="w-full p-2 mt-1 border border-gray-300 rounded-md shadow-sm" min="1" value="1">
+        <button id="placeOrder" class="w-full px-4 py-2 mt-4 italic text-white bg-green-500 rounded hover:bg-green-600 font-poppins">Place Order</button>
+      </div>
+
+      <!-- Close Modal Button -->
+      <button id="closeModal" class="w-full px-4 py-2 mt-6 italic text-white bg-blue-500 rounded font-poppins">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
